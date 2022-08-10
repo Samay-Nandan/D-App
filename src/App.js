@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { toast } from 'react-toastify';
+import { INSTALL_METAMASK_EXTENSION } from './constants/error';
+import { ETH_REQUEST_ACCOUNTS } from './constants/web3';
 import './App.css';
 
-function App() {
+const App = () => {
+
+  const web3Handler = async () => {
+
+   const response = await window.ethereum.request({ method: ETH_REQUEST_ACCOUNTS })
+   console.log('response', response)
+   
+  };
+
+  useEffect(() => {
+    if (typeof window.ethereum === 'undefined') 
+      toast.error(INSTALL_METAMASK_EXTENSION, { toastId: INSTALL_METAMASK_EXTENSION })
+    else 
+      web3Handler()
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={web3Handler}>Connect to Metamask</button>
     </div>
   );
 }

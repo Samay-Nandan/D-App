@@ -1,0 +1,1 @@
+export const ETH_REQUEST_ACCOUNTS = 'eth_requestAccounts'
