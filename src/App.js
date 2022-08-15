@@ -1,9 +1,12 @@
-import ConnectWallet from './components/connectWallet';
+import { useConnectWallet } from "./hooks";
 
 const App = () => {
+  
+  useConnectWallet()
 
   return (
-    <ConnectWallet />
+    <>
+    </>
   );
 }
 
