@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CONNECTED_WALLET_ACCOUNT } from "../../constants/action";
+import { CONNECTED_WALLET_ACCOUNT } from "../types/wallet";
 
 const initialState = {
-    account: []
+    account: ''
 }
 
 const wallet = createSlice({
@@ -15,4 +15,4 @@ const wallet = createSlice({
     }  
 });
 
-export default wallet.reducer;
+export const Wallet = wallet.reducer;

@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { NODE_ENV } from "../constants/environment";
-import { wallet } from "./reducer";
+import { Wallet } from "./reducer/wallet";
 
 const reducer = {
-    wallet
+  Wallet
 }
 
 const store = configureStore({
