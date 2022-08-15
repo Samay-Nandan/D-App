@@ -1,10 +1,10 @@
 import { useCallback, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { useDispatch } from "react-redux";
-import { INSTALL_METAMASK_EXTENSION } from '../constants/error';
-import { WALLET_CONNECTED_SUCCESFULLY } from '../constants/success';
-import { ETH_REQUEST_ACCOUNTS } from '../constants/web3';
-import { CONNECTED_WALLET_ACCOUNT } from '../store/types/wallet';
+import { INSTALL_METAMASK_EXTENSION } from '../../constants/error';
+import { WALLET_CONNECTED_SUCCESFULLY } from '../../constants/success';
+import { ETH_REQUEST_ACCOUNTS } from '../../constants/web3';
+import { CONNECTED_WALLET_ACCOUNT } from '../../store/types/wallet';
 
 const useConnectWallet = () => {
     
