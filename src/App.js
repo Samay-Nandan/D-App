@@ -5,12 +5,12 @@ import { H1 } from "./styles/App.styles";
 const App = () => {
 
   useConnectWallet();
-  const wallet = useSelector((state) => state.Wallet);
+  const { account } = useSelector((state) => state.Wallet);
 
-  if(!wallet.account) return <H1>Connect to Metamask</H1>
+  if(!account) return <H1>Connect to Metamask</H1>
 
   return (
-    <H1>Connected Account: {wallet.account}</H1>
+    <H1>Connected Account: {account}</H1>
   );
 }
 
