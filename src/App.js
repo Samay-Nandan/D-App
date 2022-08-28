@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import { useConnectWallet } from "./hooks";
 import { H1 } from "./styles/App.styles";
 
